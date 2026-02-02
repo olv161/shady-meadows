@@ -10,8 +10,7 @@ Feature: Booking Creation API Tests
     Then status 200
     * def roomId = response.rooms[0].roomid
 
-    # Generate future dates to avoid conflicts
-    # there is endpoint /api/report/room/1 to check existing bookings if needed
+    # Generate future dates using Java LocalDate
     * def LocalDate = Java.type('java.time.LocalDate')
     * def checkin = LocalDate.now().plusDays(180).toString()
     * def checkout = LocalDate.now().plusDays(183).toString()
@@ -26,9 +25,11 @@ Feature: Booking Creation API Tests
       "firstname": "Antonio",
       "lastname": "Banderas",
       "depositpaid": true,
+      "email": "antonio@test.com",
+      "phone": "01onal2345678",
       "bookingdates": {
-        "checkin": "#(formatDate(checkin))",
-        "checkout": "#(formatDate(checkout))"
+        "checkin": "#(checkin)",
+        "checkout": "#(checkout)"
       }
     }
     """
