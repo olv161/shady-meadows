@@ -1,0 +1,15 @@
+# IDE
+.idea/
+
+# Karate / Maven
+target/
+
+# Playwright
+node_modules/
+/test-results/
+/playwright/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+test-results/
+playwright/test-results/

@@ -1,0 +1,22 @@
+{
+  "name": "shady-meadows",
+  "version": "1.0.0",
+  "description": "test repository for functionality testing of the Shady Meadows B&amp;B platform",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olv161/shady-meadows.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olv161/shady-meadows/issues"
+  },
+  "homepage": "https://github.com/olv161/shady-meadows#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^25.1.0"
+  }
+}
