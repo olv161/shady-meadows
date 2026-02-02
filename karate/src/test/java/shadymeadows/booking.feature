@@ -10,10 +10,13 @@ Feature: Booking Creation API Tests
     Then status 200
     * def roomId = response.rooms[0].roomid
 
-    # Generate future dates using Java LocalDate
+    # Generate random future dates to avoid conflicts
     * def LocalDate = Java.type('java.time.LocalDate')
-    * def checkin = LocalDate.now().plusDays(180).toString()
-    * def checkout = LocalDate.now().plusDays(183).toString()
+    * def Random = Java.type('java.util.Random')
+    * def random = new Random()
+    * def randomDays = 10 + random.nextInt(100)
+    * def checkin = LocalDate.now().plusDays(randomDays).toString()
+    * def checkout = LocalDate.now().plusDays(randomDays + 3).toString()
 
     # Create booking
     # Note: Karate auto-sets Content-Type: application/json for JSON payloads
@@ -26,7 +29,7 @@ Feature: Booking Creation API Tests
       "lastname": "Banderas",
       "depositpaid": true,
       "email": "antonio@test.com",
-      "phone": "01onal2345678",
+      "phone": "012345678901",
       "bookingdates": {
         "checkin": "#(checkin)",
         "checkout": "#(checkout)"
