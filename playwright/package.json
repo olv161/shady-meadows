@@ -1,9 +1,16 @@
 {
   "name": "shady-meadows",
   "version": "1.0.0",
-  "description": "test repository for functionality testing of the Shady Meadows B&amp;B platform",
+  "description": "Test repository for functionality testing of the Shady Meadows B&B platform",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:report": "npx playwright show-report",
+    "test:chromium": "npx playwright test --project=chromium"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/olv161/shady-meadows.git"
