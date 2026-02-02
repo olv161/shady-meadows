@@ -12,10 +12,9 @@ Feature: Booking Creation API Tests
 
     # Generate future dates to avoid conflicts
     # there is endpoint /api/report/room/1 to check existing bookings if needed
-    * def today = new Date()
-    * def checkin = new Date(today.getTime() + 180*24*60*60*1000)
-    * def checkout = new Date(today.getTime() + 183*24*60*60*1000)
-    * def formatDate = function(d) { return d.toISOString().split('T')[0] }
+    * def LocalDate = Java.type('java.time.LocalDate')
+    * def checkin = LocalDate.now().plusDays(180).toString()
+    * def checkout = LocalDate.now().plusDays(183).toString()
 
     # Create booking
     # Note: Karate auto-sets Content-Type: application/json for JSON payloads
