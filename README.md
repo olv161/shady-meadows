@@ -40,9 +40,15 @@ Tests run automatically via GitHub Actions (`.github/workflows/test-run.yml`) on
 - **api-tests**: Runs Karate tests with Java 21, uploads reports as artifacts
 - **ui-tests**: Runs Playwright tests with Node 18, uploads reports and test results as artifacts
 
-## Test Results
-API Tests (Karate)
+### Test Results
+API Tests (Karate) - 9 scenarios, all passing
+- Three feature files covering: booking creation, branding verification, room inventory
+- Quick execution: under 2 seconds total
 <img width="1324" height="364" alt="image" src="https://github.com/user-attachments/assets/906fd3d5-3426-4c26-85d7-d75b8083453b" />
 
 UI Tests (Playwright) - UI tests executed across Chromium, Firefox, and WebKit
+— 12 tests, all passing
+- Tests cover login page and homepage functionality
+- Cross-browser coverage: Chromium, Firefox, WebKit
+- Fast execution: 5 seconds total
 <img width="1061" height="955" alt="image" src="https://github.com/user-attachments/assets/f758c5e3-8bf6-4c6b-babc-90c7bae2a97d" />
