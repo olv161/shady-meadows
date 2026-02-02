@@ -34,7 +34,7 @@ cd playwright && npm install && npx playwright test
 
 ## CI/CD Integration
 
-Tests run automatically via GitHub Actions (`.github/workflows/test-run.yml`) on every push and pull request.
+Tests run automatically via GitHub Actions (`.github/workflows/test-run.yml`) on every pull request.
 
 **Two parallel jobs:**
 - **api-tests**: Runs Karate tests with Java 21, uploads reports as artifacts
